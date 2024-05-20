@@ -1,0 +1,34 @@
+START
+	DECLARATIONS
+		DOUBLE total ← 0.0
+		DOUBLE average ← 0.0
+		DOUBLE maximum ← negativeInfinity
+		DOUBLE minimum ← positiveInfinity
+		CONSTANT DOUBLE interest ← 0.20
+		DOUBLE[] numbers ← [5]
+		INT count = 0
+		
+	While count < 5 then
+		OUTPUT "Enter a number: "
+		USERINPUT → numbers[count]
+		total += numbers[count]
+		
+		if (maximum < numbers[count]) then
+			maximum = numbers
+		endIf
+		if (minimum > numbers[count]) then
+			minimum = numbers[count]
+		endIf
+			
+		count++
+	endWhile
+		
+	average ← total / 5
+	
+	OUTPUT total
+	OUTPUT average
+	OUTPUT maximum
+	OUTPUT minimum
+	OUTPUT (total + (interest * total))	
+		
+END
